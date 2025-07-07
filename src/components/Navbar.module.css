@@ -1,0 +1,224 @@
+/* NAVBAR with cyan background and padding */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 90%;
+  background-color: #00bcd4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 20px;
+  border-radius: 1rem; /* Rounded corners */
+  transition: all 0.3s ease;
+}
+
+/* Container centers the content */
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Row for logo and title */
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo image style */
+.logoImage {
+  height: 65px;
+  width: 65px;
+  object-fit: cover;
+  
+}
+
+/* Logo text (title) styling */
+.logoText {
+  font-size: 3rem;          
+  font-weight: 800;
+  color: black;           
+  text-decoration: none;
+}
+
+.logoText:hover {
+  color: white;           
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.desktopMenu {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .desktopMenu {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.navLink {
+  background: white;
+  color: Black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  text-decoration: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navLink:hover {
+  background-color: orange;
+  color: white;
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 2.5rem;
+  left: 0;
+  width: 12rem;
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 0.5rem 0;
+}
+
+.dropdownItem {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.dropdownItem:hover {
+  background-color: #e0e7ff;
+}
+
+.chevron {
+  width: 1rem;
+  height: 1rem;
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.mobileToggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .mobileToggle {
+    display: none;
+  }
+}
+
+.menuIcon {
+  width: 2rem;
+  height: 2rem;
+  color: #1e3a8a;
+}
+
+.mobileMenu {
+  display: block;
+  background-color: white;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 0;
+}
+
+.mobileItem {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.mobileItem:hover {
+  background-color: #e0e7ff;
+}
+
+.mobileSubmenu {
+  padding: 0.75rem 1.5rem;
+}
+
+.mobileDropdown {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.themeToggle {
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+.themeToggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.25rem;
+  padding: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.themeToggle button:hover {
+  transform: rotate(20deg);
+}
+:global(body.dark-mode) .yourClassName {
+  background-color: #1e1e1e;
+  color: white;
+}
+/* Smooth transition (optional) */
+.logoText {
+  transition: color 0.3s ease-in-out;
+}
+
+/* All nav links in dark mode */
+.dark-mode .navLink,
+.dark-mode .dropdownItem,
+.dark-mode .mobileItem,
+.dark-mode .logoText {
+  color: orange !important;
+}
+.dark-mode .navLink {
+  background-color: #222 !important;
+  border: 1px solid orange;
+}
+
+/* Hover state remains orange on dark */
+.dark-mode .navLink:hover,
+.dark-mode .dropdownItem:hover,
+.dark-mode .mobileItem:hover {
+  background-color: orange !important;
+  color: white !important;
+}
+
+.navLink,
+.dropdownItem,
+.mobileItem,
+.logoText {
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
