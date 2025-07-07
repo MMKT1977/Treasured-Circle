@@ -9,5 +9,9 @@ Welcome to **Treasured Circle**, a compassionate platform for connecting individ
 Deployed on [Render](https://render.com) — _link will appear here once deployed._
 
 ---
+📄 License
+This project is licensed under the MIT License.
 
+👤 Author
+Built with care by Moranga Kennedy
 
